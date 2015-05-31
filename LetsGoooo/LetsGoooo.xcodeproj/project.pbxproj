@@ -42,6 +42,7 @@
 		A2F71BBB1B1B8AC200BFE5EE /* LetsGooooTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LetsGooooTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A2F71BC01B1B8AC200BFE5EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A2F71BC11B1B8AC200BFE5EE /* LetsGooooTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LetsGooooTests.m; sourceTree = "<group>"; };
+		A2F71BCB1B1B8AE100BFE5EE /* LetsGoooo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = LetsGoooo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +84,7 @@
 		A2F71BA11B1B8AC200BFE5EE /* LetsGoooo */ = {
 			isa = PBXGroup;
 			children = (
+				A2F71BCB1B1B8AE100BFE5EE /* LetsGoooo.entitlements */,
 				A2F71BA61B1B8AC200BFE5EE /* AppDelegate.h */,
 				A2F71BA71B1B8AC200BFE5EE /* AppDelegate.m */,
 				A2F71BAC1B1B8AC200BFE5EE /* ViewController.h */,
@@ -171,6 +173,12 @@
 				TargetAttributes = {
 					A2F71B9E1B1B8AC200BFE5EE = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 246U3NZ7Z2;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					A2F71BBA1B1B8AC200BFE5EE = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -353,9 +361,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LetsGoooo/LetsGoooo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LetsGoooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -363,9 +375,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LetsGoooo/LetsGoooo.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = LetsGoooo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
